@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="https://unpkg.com/chota@latest">
 </head>
 <body>
-hello world
+<div class="row">
+  <div class="col"> .col </div>
+  <div class="col"> .col </div>
+</div
 </body>
 </html>
