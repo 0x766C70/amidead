@@ -1,2 +1,6 @@
 # amidead
-
+##Doc
+###encrypt your message
+echo "My root password is: my_p4ssw0Rd ! So Long, and Thanks for All the Fish !)" | gpg -ear 'yourSO@alive.org') > ./message
+###config SO
+echo yourSO@alive.org > config
