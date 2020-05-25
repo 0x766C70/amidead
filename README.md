@@ -9,6 +9,7 @@
 ## Cas d'utilisation
 
  * Déplacement en zone à risque
+ * Solution de secour pour server si plus de connexion
  * Randonnée
  * Décés
 
@@ -45,11 +46,12 @@
 
 ## Usage
 
-amidead is a line life. After a configured time, if no connection have been initiate, the script will send a emergency message
+amidead is a line life. After a configured time, if no connection have been initiated, the script will send a emergency message
 
 ## use cases
 
  * High risk area
+ * IT server rescue system
  * Hikking
  * Dead
 
