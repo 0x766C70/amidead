@@ -15,7 +15,9 @@
 
 ### Requirements
 
-	apache2 php7.x dateutils jq
+ * Serveur web de votre choix + php 7.X
+ * Script: datautils jq
+ * Envoi email: msmtp
 
 ### Install
 
