@@ -1,10 +1,21 @@
 # amidead
 
+
+## Usage
+
+ amidead est une ligne de vie. Si au bout d'une durée définie vous ne vous êtes pas connecté à une url déterminée, le programme envoie un message à un destinataire défini.
+
+## Cas d'utilisation
+
+ * Déplacement en zone à risque
+ * Randonnée
+ * Décés
+
 ## Doc
 
 ### Requirements
 
-	apache2 php 7.x dateutils jq
+	apache2 php7.x dateutils jq
 
 ### Install
 
