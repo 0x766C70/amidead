@@ -9,11 +9,11 @@
 ### Install
 
  * Mettre le repo derrière une web auth
- * Donnez les droits au repo à www-data pour log
+ * Donnez les droits au repo à www-data:yourUser pour log
  * Faire un cron du script ./check.sh en accord avec votre situation: monthly, daily, hourly... 
  * Compléter le fichier de config
      * myself: votre email
-     * units: unité des écarts de temps. La valeur doit être: S,M,H,d,m,y pour seconde, minute, heure, Jour, Mois, Année
+     * units: unité des écarts de temps. La valeur doit être: S,M,H,d,m,y pour seconde, minute, heure, jour, mois, année
      * timeMail: durée à partir de laquel le programme envoie un premier message d'alerte
      * timeLastCall: durée après le premier mail pour un dernier appel
      * timeSOS: déclenche l'envoi du message de secours

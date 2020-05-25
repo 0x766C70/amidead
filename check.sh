@@ -1,8 +1,8 @@
 #!/bin/bash
 
-config="/var/www/amidead/config.json"
+config="$(dirname "$BASH_SOURCE")/config.json"
+log="$(dirname "$BASH_SOURCE")/log"
 
-log=$(		 cat "$config" | jq '.config.log'	     	| tr --delete '"')
 myMail=$(        cat "$config" | jq '.config.myself'     	| tr --delete '"')
 units=$(         cat "$config" | jq '.config.units'     	| tr --delete '"')
 timeMail=$(      cat "$config" | jq '.config.timeMail'   	| tr --delete '"')

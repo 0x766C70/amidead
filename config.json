@@ -1,11 +1,10 @@
 {
 	"config": {
 		"myself": "thomas@criscione.fr",
-		"log": "/var/www/amidead/log",
-		"units": "H",
-		"timeMail": "1",
-		"timeLastCall": "1",
-		"timeSOS": "1",
+		"units": "d",
+		"timeMail": "30",
+		"timeLastCall": "10",
+		"timeSOS": "10",
 		"url": "https://dead.00011100.org",
 		"recipient": "benoit@neviani.fr"
 	}
