@@ -20,6 +20,7 @@
      * url: Adresse où signaler que tout va bien
      * recipient: contact qui recevra la message de secours
 
+
  * Il faut que le cron du check et le délai soient cohérent.
  * Mettre le message de sos dans ./message. Le chiffrer si necessaire:
 
