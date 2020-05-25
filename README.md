@@ -52,8 +52,8 @@ amidead is a line life. After a configured time, if no connection have been init
 
  * High risk area
  * IT server rescue system
- * Hikking
- * Dead
+ * Hiking
+ * Death
 
 ## Documentation
 
@@ -67,7 +67,7 @@ amidead is a line life. After a configured time, if no connection have been init
 
  * Configure a web auth in front of the web repo
  * Set repo rights: chown www-data:yourUser ./amidead -R et chmod 660 ./amidead -R
- * add a cron job for check.sh. The spam should match with your use case
+ * add a cron job for check.sh. The span should match with your use case
  * Configure the config.json file
      * myself: your email
      * units: time units. values should be: S,M,H,d,m,y for secondes, minutes, hours, days, months, years
