@@ -34,5 +34,5 @@ elif [ "$diffPing" -ge $timeMail ]; then
         echo -e $now >> log
         echo -e "ko" >> log
 elif [ "$lastPing" == "SOS" ]; then
-	echo "X_x"
+	#echo "X_x"
 fi
