@@ -10,5 +10,10 @@
 </head>
 <body>
 I'm not dead !
+<?php
+	$file = 'log';
+	$today = date("Y-m-d");
+	file_put_contents($file, $today."\n", FILE_APPEND | LOCK_EX);
+?>
 </body>
 </html>
