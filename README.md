@@ -24,7 +24,7 @@ english below
 ### Install
 
  * Mettre le repo derrière une web auth
- * Donnez les droits au repo: chown www-data:yourUser ./amidead -R et chmod 660 ./amidead -R
+ * Donnez les droits au repo: chown www-data:yourUser ./amidead -R et chmod 770 ./amidead -R
  * Faire un cron du script ./check.sh en accord avec votre situation: monthly, daily, hourly... 
  * Compléter le fichier de config
      * myself: votre email
@@ -66,7 +66,7 @@ amidead is a line life. After a configured time, if no connection have been init
 ### Install
 
  * Configure a web auth in front of the web repo
- * Set repo rights: chown www-data:yourUser ./amidead -R et chmod 660 ./amidead -R
+ * Set repo rights: chown www-data:yourUser ./amidead -R et chmod 770 ./amidead -R
  * add a cron job for check.sh. The span should match with your use case
  * Configure the config.json file
      * myself: your email
