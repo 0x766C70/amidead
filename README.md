@@ -19,13 +19,11 @@
      * timeSOS: déclenche l'envoi du message de secours
      * url: Adresse où signaler que tout va bien
      * recipient: contact qui recevra la message de secours
-
-
  * Il faut que le cron du check et le délai soient cohérent.
  * Mettre le message de sos dans ./message. Le chiffrer si necessaire:
 
-	echo "My root password is: my_p4ssw0Rd ! So Long, and Thanks for All the Fish !)" | gpg -ear 'yourSO@alive.org') > ./message
+    echo "My root password is: my_p4ssw0Rd ! So Long, and Thanks for All the Fish !)" | gpg -ear 'yourSO@alive.org') > ./message
 
  * Il est possible d'automatiser le signe de vie en mettant un cron sur le laptop avec la commande:
 
-	curl -s --user user:passwd https://dead.yoursite.org/ >> /dev/null
+    curl -s --user user:passwd https://dead.yoursite.org/ >> /dev/null
