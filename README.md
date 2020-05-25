@@ -18,7 +18,7 @@ english below
 ### Requirements
 
  * Serveur web de votre choix + php 7.X
- * Script: datautils jq
+ * Script: dateutils jq
  * Envoi email: msmtp
 
 ### Install
@@ -60,7 +60,7 @@ amidead is a line life. After a configured time, if no connection have been init
 ### Requirements
 
  * Your favorite webserver + php 7.X
- * Script: datautils jq
+ * Script: dateutils jq
  * mails: msmtp
 
 ### Install
