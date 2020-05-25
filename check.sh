@@ -1,17 +1,17 @@
 #!/bin/bash
 
-myMail=$(        cat "/var/www/amidead/config.json" | jq '.config.myself'     		| tr --delete '"')
-units=$(         cat "/var/www/amidead/config.json" | jq '.config.units'     		| tr --delete '"')
-timeMail=$(      cat "/var/www/amidead/config.json" | jq '.config.timeMail'   		| tr --delete '"')
-timeLastCall=$(  cat "/var/www/amidead/config.json" | jq '.config.timeLastCall'    	| tr --delete '"')
-timeSOS=$(       cat "/var/www/amidead/config.json" | jq '.config.timeSOS'		| tr --delete '"')
-url=$( 		 cat "/var/www/amidead/config.json" | jq '.config.url' 			| tr --delete '"')
-recipient=$(     cat "/var/www/amidead/config.json" | jq '.config.recipient'  		| tr --delete '"')
+config="/var/www/amidead/config.json"
 
-log="/var/www/amidead/log"
+log=$(		 cat "$config" | jq '.config.log'	     	| tr --delete '"')
+myMail=$(        cat "$config" | jq '.config.myself'     	| tr --delete '"')
+units=$(         cat "$config" | jq '.config.units'     	| tr --delete '"')
+timeMail=$(      cat "$config" | jq '.config.timeMail'   	| tr --delete '"')
+timeLastCall=$(  cat "$config" | jq '.config.timeLastCall'    	| tr --delete '"')
+timeSOS=$(       cat "$config" | jq '.config.timeSOS'		| tr --delete '"')
+url=$( 		 cat "$config" | jq '.config.url' 		| tr --delete '"')
+recipient=$(     cat "$config" | jq '.config.recipient' 	| tr --delete '"')
 
 now=$( date +'%Y-%m-%dT%H:%M:%S' )
-
 
 lastPing=$( tail -n 1 $log )
 previousPing=$( tail -n 2 $log | head -n 1 )
