@@ -1,6 +1,6 @@
 # amidead
 
-- english below -
+english below
 
 ## Usage
 
