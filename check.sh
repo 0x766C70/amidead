@@ -2,6 +2,7 @@
 
 config="$(dirname "$BASH_SOURCE")/config.json"
 log="$(dirname "$BASH_SOURCE")/log"
+message="$(dirname "$BASH_SOURCE")/message"
 
 myMail=$(        cat "$config" | jq '.config.myself'     	| tr --delete '"')
 units=$(         cat "$config" | jq '.config.units'     	| tr --delete '"')
@@ -23,7 +24,7 @@ else
 fi
 
 if [ "$lastPing" == "koSOS" ] && [ "$diffPing" -ge $timeSOS ]; then
-	echo -e "Subject:SOS MAIL of $myMail \n$(cat ./message)" | msmtp "$recipient"
+	echo -e "Subject:SOS MAIL of $myMail \n$(cat $message)" | msmtp "$recipient"
 	echo -e $now >> "$log"
 	echo -e "SOS" >> "$log"
 elif [ "$lastPing" == "ko" ] && [ "$diffPing" -ge $timeLastCall ]; then
