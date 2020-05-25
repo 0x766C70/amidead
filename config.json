@@ -1,0 +1,12 @@
+{
+	"config": {
+		"myself": "thomas@criscione.fr",
+		"units": "M",
+		"timeMail": "30",
+		"timeLastCall": "10",
+		"timeSOS": "2",
+		"url": "https://dead.00011100.org",
+		"recipientNB": "1",
+		"recipient1": "thomas@criscioner.fr"
+	}
+}
