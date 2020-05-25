@@ -1,5 +1,6 @@
 # amidead
 
+- english below -
 
 ## Usage
 
@@ -39,3 +40,45 @@
  * Il est possible d'automatiser le signe de vie en mettant un cron sur le laptop avec la commande:
 
     curl -s --user user:passwd https://dead.yoursite.org/ >> /dev/null
+
+# amidead - English
+
+## Usage
+
+amidead is a line life. After a configured time, if no connection have been initiate, the script will send a emergency message
+
+## use cases
+
+ * High risk area
+ * Hikking
+ * Dead
+
+## Documentation
+
+### Requirements
+
+ * Your favorite webserver + php 7.X
+ * Script: datautils jq
+ * mails: msmtp
+
+### Install
+
+ * Configure a web auth in front of the web repo
+ * Set repo rights: chown www-data:yourUser ./amidead -R et chmod 660 ./amidead -R
+ * add a cron job for check.sh. The spam should match with your use case
+ * Configure the config.json file
+     * myself: your email
+     * units: time units. values should be: S,M,H,d,m,y for secondes, minutes, hours, days, months, years
+     * timeMail: time before the first alert email
+     * timeLastCall: time for the last call
+     * timeSOS: time for the emergency email
+     * url: iamalive url
+     * recipient: recipient of your emergency mail
+ * Write your emergency message in ./message. You can encrypt it::
+
+    echo "My root password is: my_p4ssw0Rd ! So Long, and Thanks for All the Fish !)" | gpg -ear 'yourSO@alive.org') > ./message
+
+ * You can make the iamalive ping in your laptop cron job:
+
+    curl -s --user user:passwd https://dead.yoursite.org/ >> /dev/null
+
