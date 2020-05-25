@@ -46,7 +46,7 @@ english below
 
 ## Usage
 
-amidead is a line life. After a configured time, if no connection have been initiated, the script will send a emergency message
+amidead is a line life. After a configured time, if no connection have been initiated to a specific url, the script will send a emergency email.
 
 ## use cases
 
