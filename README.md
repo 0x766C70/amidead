@@ -22,7 +22,7 @@
 ### Install
 
  * Mettre le repo derrière une web auth
- * Donnez les droits au repo à www-data:yourUser pour log
+ * Donnez les droits au repo: chown www-data:yourUser ./amidead -R et chmod 660 ./amidead -R
  * Faire un cron du script ./check.sh en accord avec votre situation: monthly, daily, hourly... 
  * Compléter le fichier de config
      * myself: votre email
@@ -32,7 +32,6 @@
      * timeSOS: déclenche l'envoi du message de secours
      * url: Adresse où signaler que tout va bien
      * recipient: contact qui recevra la message de secours
- * Il faut que le cron du check et le délai soient cohérent.
  * Mettre le message de sos dans ./message. Le chiffrer si necessaire:
 
     echo "My root password is: my_p4ssw0Rd ! So Long, and Thanks for All the Fish !)" | gpg -ear 'yourSO@alive.org') > ./message
