@@ -9,7 +9,7 @@ english below
 ## Cas d'utilisation
 
  * Déplacement en zone à risque
- * Solution de secour pour server si plus de connexion
+ * Solution de secours pour server si plus de connexion
  * Randonnée
  * Décés
 
