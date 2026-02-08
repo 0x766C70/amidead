@@ -10,17 +10,26 @@
 <?php
 // Error handling
 error_reporting(E_ALL);
-ini_set('display_errors', '0'); // Don't display errors to users
+ini_set('display_errors', 0); // Don't display errors to users
 
 // Configuration
 $logFile = __DIR__ . '/log';
 
-// Validate log file is writable
-if (!is_writable($logFile)) {
-    http_response_code(500);
-    echo '<p>Error: Log file is not writable.</p>';
-    error_log("amidead: Log file is not writable: $logFile");
-    exit(1);
+// Validate log file is writable (or directory is writable if file doesn't exist)
+if (file_exists($logFile)) {
+    if (!is_writable($logFile)) {
+        http_response_code(500);
+        echo '<p>Error: Log file is not writable.</p>';
+        error_log("amidead: Log file is not writable: $logFile");
+        exit(1);
+    }
+} else {
+    if (!is_writable(__DIR__)) {
+        http_response_code(500);
+        echo '<p>Error: Directory is not writable.</p>';
+        error_log("amidead: Directory is not writable: " . __DIR__);
+        exit(1);
+    }
 }
 
 // Get current timestamp in ISO 8601 format

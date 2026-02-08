@@ -28,6 +28,9 @@ for cmd in jq dateutils.ddiff msmtp; do
     command -v "$cmd" >/dev/null 2>&1 || error_exit "Required command not found: $cmd"
 done
 
+# Note: msmtp configuration is checked at send time, not here
+# This allows the script to run checks without requiring a full mail setup
+
 # Read configuration using jq -r (raw output, no quotes needed)
 myMail=$(jq -r '.config.myself' "$CONFIG") || error_exit "Failed to read 'myself' from config"
 units=$(jq -r '.config.units' "$CONFIG") || error_exit "Failed to read 'units' from config"
@@ -71,6 +74,8 @@ else
 fi
 
 # Remove any decimal points from diffPing for integer comparison
+# dateutils.ddiff may return decimal values (e.g., "30.5"), but bash's -ge
+# operator requires integers. We truncate to get whole units (e.g., "30").
 diffPing=${diffPing%%.*}
 
 # Send appropriate alerts based on state and time elapsed
